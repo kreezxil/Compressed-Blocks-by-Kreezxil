@@ -1,0 +1,16 @@
+[
+{
+  "modid": "KreezxilsCompressedBlocks",
+  "name": "Kreezxil's Compressed Blocks",
+  "description": "Fighting the block invasion and winning!",
+  "version": "2.0.1",
+  "mcversion": "1.8",
+  "url": "http://minecraft.curseforge.com/projects/kreezxils-compressed-blocks",
+  "updateUrl": "",
+  "authorList": ["Kreezxil"],
+  "credits": "The Forge and FML guys, for making this possible, also Bedrock_Miner and Wuppy29 for their awesome tutorials.",
+  "logoFile": "/logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
