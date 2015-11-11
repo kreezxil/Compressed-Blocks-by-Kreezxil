@@ -2,13 +2,13 @@ package com.kreezxil.compressedblocks.blocks;
 
 import java.util.Random;
 
+import com.kreezxil.compressedblocks.CompressedBlocks;
+import com.kreezxil.compressedblocks.ModBlocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
-
-import com.kreezxil.compressedblocks.CompressedBlocks;
-import com.kreezxil.compressedblocks.ModBlocks;
 
 public class SeptupleCompressedGravel  extends Block {
 
@@ -21,11 +21,11 @@ public class SeptupleCompressedGravel  extends Block {
 		this.setResistance(resistance);
 		this.setHarvestLevel("shovel",3);
 	}
-	
+
 	public SeptupleCompressedGravel(String name, float hardness, float resistance) {
 		this(name, Material.rock, hardness, resistance);
 	}
-	
+
 	public SeptupleCompressedGravel(String name) {
 		this(name, 384f, 1920f);
 	}
@@ -34,18 +34,22 @@ public class SeptupleCompressedGravel  extends Block {
 	public int quantityDropped(Random par1Random){
 		return 9;
 	}
-	
+
 	@Override
 	public Item getItemDropped(IBlockState state, Random par2Random, int fortune){
 		Random rn = new Random();
 		int flintChance = rn.nextInt(10);
-		
+
 		if(fortune > 0)
 			return Item.getItemFromBlock(ModBlocks.SextupleCompressedGravel);
 		else if (flintChance<=1)
-			return Item.getItemFromBlock(ModBlocks.SextupleCompressedFlint);
+			return Item.getItemFromBlock(ModBlocks.CompressedFlint);
 		else
 			return Item.getItemFromBlock(ModBlocks.SextupleCompressedGravel);
 	}
 
+	@Override
+	public int damageDropped(IBlockState state){
+		return 5;
+	}
 }

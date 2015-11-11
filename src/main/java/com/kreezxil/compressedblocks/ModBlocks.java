@@ -40,6 +40,7 @@ import com.kreezxil.compressedblocks.blocks.TripleCompressedDirt;
 import com.kreezxil.compressedblocks.blocks.TripleCompressedGravel;
 import com.kreezxil.compressedblocks.blocks.TripleCompressedSand;
 import com.kreezxil.compressedblocks.blocks.coalAndGravelMix;
+import com.kreezxil.compressedblocks.itemblocks.ItemBlockCompressedFlint;
 
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -58,39 +59,32 @@ public final class ModBlocks {
 	public static Block DoubleCompressedCoalBlock;
 	public static Block DoubleCompressedCobblestone;
 	public static Block DoubleCompressedDirt;
-	public static Block DoubleCompressedFlint;
 	public static Block DoubleCompressedGravel;
 	public static Block DoubleCompressedSand;
 	public static Block OctupleCompressedCobblestone;
 	public static Block OctupleCompressedDirt;
-	public static Block OctupleCompressedFlint;
 	public static Block OctupleCompressedGravel;
 	public static Block OctupleCompressedSand;
 	public static Block QuadrupleCompressedCoalBlock;
 	public static Block QuadrupleCompressedCobblestone;
 	public static Block QuadrupleCompressedDirt;
-	public static Block QuadrupleCompressedFlint;
 	public static Block QuadrupleCompressedGravel;
 	public static Block QuadrupleCompressedSand;
 	public static Block QuintupleCompressedCobblestone;
 	public static Block QuintupleCompressedDirt;
-	public static Block QuintupleCompressedFlint;
 	public static Block QuintupleCompressedGravel;
 	public static Block QuintupleCompressedSand;
 	public static Block SeptupleCompressedCobblestone;
 	public static Block SeptupleCompressedDirt;
-	public static Block SeptupleCompressedFlint;
 	public static Block SeptupleCompressedGravel;
 	public static Block SeptupleCompressedSand;
 	public static Block SextupleCompressedCobblestone;
 	public static Block SextupleCompressedDirt;
-	public static Block SextupleCompressedFlint;
 	public static Block SextupleCompressedGravel;
 	public static Block SextupleCompressedSand;
 	public static Block TripleCompressedCoalBlock;
 	public static Block TripleCompressedCobblestone;
 	public static Block TripleCompressedDirt;
-	public static Block TripleCompressedFlint;
 	public static Block TripleCompressedGravel;
 	public static Block TripleCompressedSand;
 
@@ -104,7 +98,7 @@ public final class ModBlocks {
 	}
 
 	public static void createBlocks() {
-		reg(CompressedFlint = new CompressedFlint(),"CompressedFlint");
+		GameRegistry.registerBlock(CompressedFlint = new CompressedFlint(), ItemBlockCompressedFlint.class, "CompressedFlint");
 
 		reg(coalAndGravelMix = new coalAndGravelMix("coalAndGravelMix"),"coalAndGravelMix");
 		reg(ActivatedCarbonite = new ActivatedCarbonite("ActivatedCarbonite"),"ActivatedCarbonite");

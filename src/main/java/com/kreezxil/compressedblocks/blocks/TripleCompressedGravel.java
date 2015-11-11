@@ -2,13 +2,13 @@ package com.kreezxil.compressedblocks.blocks;
 
 import java.util.Random;
 
+import com.kreezxil.compressedblocks.CompressedBlocks;
+import com.kreezxil.compressedblocks.ModBlocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
-
-import com.kreezxil.compressedblocks.CompressedBlocks;
-import com.kreezxil.compressedblocks.ModBlocks;
 
 public class TripleCompressedGravel  extends Block {
 
@@ -21,11 +21,11 @@ public class TripleCompressedGravel  extends Block {
 		this.setResistance(resistance);
 		this.setHarvestLevel("shovel", 1);
 	}
-	
+
 	public TripleCompressedGravel(String name, float hardness, float resistance) {
 		this(name, Material.rock, hardness, resistance);
 	}
-	
+
 	public TripleCompressedGravel(String name) {
 		this(name, 24f, 120f);
 	}
@@ -34,18 +34,22 @@ public class TripleCompressedGravel  extends Block {
 	public int quantityDropped(Random par1Random){
 		return 9;
 	}
-	
+
 	@Override
 	public Item getItemDropped(IBlockState state, Random par2Random, int fortune){
 		Random rn = new Random();
 		int flintChance = rn.nextInt(10);
-		
+
 		if(fortune > 0)
 			return Item.getItemFromBlock(ModBlocks.DoubleCompressedGravel);
 		else if (flintChance<=1)
-			return Item.getItemFromBlock(ModBlocks.DoubleCompressedFlint);
+			return Item.getItemFromBlock(ModBlocks.CompressedFlint);
 		else
 			return Item.getItemFromBlock(ModBlocks.DoubleCompressedGravel);
 	}
 
+	@Override
+	public int damageDropped(IBlockState state){
+		return 1;
+	}
 }
