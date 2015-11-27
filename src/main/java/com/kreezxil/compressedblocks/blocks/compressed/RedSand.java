@@ -138,8 +138,7 @@ public class RedSand extends Block implements IMetaBlockName {
 			// essentially it's a validation check
 			return Item.getItemFromBlock(ModBlocks.CompressedRedSand);
 		}
-		// return Item.getItemFromBlock(Blocks.sand);
-		return new ItemStack(Blocks.sand,1,1).getItem();
+		return Item.getItemFromBlock(Blocks.sand);
 	}
 
 	@Override
@@ -156,7 +155,7 @@ public class RedSand extends Block implements IMetaBlockName {
 		if (tier != 0 && tier < MAXTIER)
 			return tier - 1;
 		else
-			return 0;
+			return 1; //this is for when the sand drops, and in this case I want red sand, so 1 is the meta for that
 	}
 
 	@Override
