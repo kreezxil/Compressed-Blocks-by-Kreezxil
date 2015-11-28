@@ -3,6 +3,11 @@ package com.kreezxil.compressedblocks.blocks.compressed;
 import java.util.List;
 import java.util.Random;
 
+import com.kreezxil.compressedblocks.CompressedBlocks;
+import com.kreezxil.compressedblocks.ModBlocks;
+import com.kreezxil.compressedblocks.blocks.compressed.Enums.FourTiers;
+import com.kreezxil.compressedblocks.itemBlocks.IMetaBlockName;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -19,11 +24,6 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
-import com.kreezxil.compressedblocks.CompressedBlocks;
-import com.kreezxil.compressedblocks.ModBlocks;
-import com.kreezxil.compressedblocks.blocks.EnumTier;
-import com.kreezxil.compressedblocks.itemBlocks.IMetaBlockName;
-
 public class CoalBlock extends Block implements IMetaBlockName {
 
 	public static final String harvestTool = "pickaxe";
@@ -39,13 +39,11 @@ public class CoalBlock extends Block implements IMetaBlockName {
 	public static final int[] harvestLevel = { STONE, IRON, IRON, IRON };
 	public static String[] tiers = { "", "Double", "Triple", "Quadruple" };
 
-	public static final PropertyEnum TIER = PropertyEnum.create("tier",
-			EnumTier.class);
+	public static final PropertyEnum TIER = PropertyEnum.create("tier", FourTiers.class);
 
 	public CoalBlock() {
 		super(Material.rock);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(TIER,
-				EnumTier.COMPRESSED));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(TIER, FourTiers.COMPRESSED));
 		this.setUnlocalizedName(UnlocalizedName);
 		this.setCreativeTab(CompressedBlocks.blocksTab);
 	}
@@ -53,7 +51,7 @@ public class CoalBlock extends Block implements IMetaBlockName {
 	@Override
 	public float getBlockHardness(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
-		EnumTier stateTier = (EnumTier) state.getValue(TIER);
+		FourTiers stateTier = (FourTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier > 0 && tier < MAXTIER) {
 			return baseHardness * tier * hardnessFactor * tier;
@@ -63,8 +61,7 @@ public class CoalBlock extends Block implements IMetaBlockName {
 	}
 
 	@Override
-	public float getExplosionResistance(World world, BlockPos pos,
-			Entity exploder, Explosion explosion) {
+	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
 		return this.getBlockHardness(world, pos) * explosionFactor;
 	}
 
@@ -75,7 +72,7 @@ public class CoalBlock extends Block implements IMetaBlockName {
 
 	@Override
 	public int getHarvestLevel(IBlockState state) {
-		EnumTier stateTier = (EnumTier) state.getValue(TIER);
+		FourTiers stateTier = (FourTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier >= 0 && tier < MAXTIER) {
 			return harvestLevel[tier];
@@ -91,26 +88,26 @@ public class CoalBlock extends Block implements IMetaBlockName {
 
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		EnumTier tier;
+		FourTiers tier;
 		switch (meta) {
 		case 1:
-			tier = EnumTier.DOUBLE;
+			tier = FourTiers.DOUBLE;
 			break;
 		case 2:
-			tier = EnumTier.TRIPLE;
+			tier = FourTiers.TRIPLE;
 			break;
 		case 3:
-			tier = EnumTier.QUADRUPLE;
+			tier = FourTiers.QUADRUPLE;
 			break;
 		default: // 0 and undefined
-			tier = EnumTier.COMPRESSED;
+			tier = FourTiers.COMPRESSED;
 		}
 		return getDefaultState().withProperty(TIER, tier);
 	}
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		EnumTier tier = (EnumTier) state.getValue(TIER);
+		FourTiers tier = (FourTiers) state.getValue(TIER);
 		return tier.getID();
 	}
 
@@ -121,7 +118,7 @@ public class CoalBlock extends Block implements IMetaBlockName {
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random par2Random, int par3) {
-		EnumTier stateTier = (EnumTier) state.getValue(TIER);
+		FourTiers stateTier = (FourTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier > 0 && tier < MAXTIER) {
 			// essentially it's a validation check
@@ -140,7 +137,7 @@ public class CoalBlock extends Block implements IMetaBlockName {
 
 	@Override
 	public int damageDropped(IBlockState state) {
-		EnumTier stateTier = (EnumTier) state.getValue(TIER);
+		FourTiers stateTier = (FourTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier != 0 && tier < MAXTIER)
 			return tier - 1;
@@ -149,10 +146,8 @@ public class CoalBlock extends Block implements IMetaBlockName {
 	}
 
 	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world,
-			BlockPos pos) {
-		return new ItemStack(Item.getItemFromBlock(this), 1,
-				this.getMetaFromState(world.getBlockState(pos)));
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos) {
+		return new ItemStack(Item.getItemFromBlock(this), 1, this.getMetaFromState(world.getBlockState(pos)));
 	}
 
 	@Override

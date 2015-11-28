@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 
 import com.kreezxil.compressedblocks.CompressedBlocks;
 import com.kreezxil.compressedblocks.ModBlocks;
-import com.kreezxil.compressedblocks.blocks.EnumTier;
+import com.kreezxil.compressedblocks.blocks.compressed.Enums.EightTiers;
 import com.kreezxil.compressedblocks.itemBlocks.IMetaBlockName;
 
 public class Redstone extends Block implements IMetaBlockName {
@@ -42,12 +42,12 @@ public class Redstone extends Block implements IMetaBlockName {
 			"Quintuple", "Sextuple", "Septuple", "Octuple" };
 
 	public static final PropertyEnum TIER = PropertyEnum.create("tier",
-			EnumTier.class);
+			EightTiers.class);
 
 	public Redstone() {
 		super(Material.rock);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TIER,
-				EnumTier.COMPRESSED));
+				EightTiers.COMPRESSED));
 		this.setUnlocalizedName(UnlocalizedName);
 		this.setCreativeTab(CompressedBlocks.blocksTab);
 	}
@@ -55,7 +55,7 @@ public class Redstone extends Block implements IMetaBlockName {
 	@Override
 	public float getBlockHardness(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
-		EnumTier stateTier = (EnumTier) state.getValue(TIER);
+		EightTiers stateTier = (EightTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier > 0 && tier < MAXTIER) {
 			return baseHardness * tier * hardnessFactor * tier;
@@ -77,7 +77,7 @@ public class Redstone extends Block implements IMetaBlockName {
 
 	@Override
 	public int getHarvestLevel(IBlockState state) {
-		EnumTier stateTier = (EnumTier) state.getValue(TIER);
+		EightTiers stateTier = (EightTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier >= 0 && tier < MAXTIER) {
 			return harvestLevel[tier];
@@ -93,38 +93,38 @@ public class Redstone extends Block implements IMetaBlockName {
 
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		EnumTier tier;
+		EightTiers tier;
 		switch (meta) {
 		case 1:
-			tier = EnumTier.DOUBLE;
+			tier = EightTiers.DOUBLE;
 			break;
 		case 2:
-			tier = EnumTier.TRIPLE;
+			tier = EightTiers.TRIPLE;
 			break;
 		case 3:
-			tier = EnumTier.QUADRUPLE;
+			tier = EightTiers.QUADRUPLE;
 			break;
 		case 4:
-			tier = EnumTier.QUINTUPLE;
+			tier = EightTiers.QUINTUPLE;
 			break;
 		case 5:
-			tier = EnumTier.SEXTUPLE;
+			tier = EightTiers.SEXTUPLE;
 			break;
 		case 6:
-			tier = EnumTier.SEPTUPLE;
+			tier = EightTiers.SEPTUPLE;
 			break;
 		case 7:
-			tier = EnumTier.OCTUPLE;
+			tier = EightTiers.OCTUPLE;
 			break;
 		default: // 0 and undefined
-			tier = EnumTier.COMPRESSED;
+			tier = EightTiers.COMPRESSED;
 		}
 		return getDefaultState().withProperty(TIER, tier);
 	}
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		EnumTier tier = (EnumTier) state.getValue(TIER);
+		EightTiers tier = (EightTiers) state.getValue(TIER);
 		return tier.getID();
 	}
 
@@ -135,7 +135,7 @@ public class Redstone extends Block implements IMetaBlockName {
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random par2Random, int par3) {
-		EnumTier stateTier = (EnumTier) state.getValue(TIER);
+		EightTiers stateTier = (EightTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier > 0 && tier < MAXTIER) {
 			return Item.getItemFromBlock(ModBlocks.CompressedRedstone);
@@ -154,7 +154,7 @@ public class Redstone extends Block implements IMetaBlockName {
 
 	@Override
 	public int damageDropped(IBlockState state) {
-		EnumTier stateTier = (EnumTier) state.getValue(TIER);
+		EightTiers stateTier = (EightTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier != 0 && tier < MAXTIER)
 			return tier - 1;
