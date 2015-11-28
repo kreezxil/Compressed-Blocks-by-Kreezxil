@@ -18,7 +18,7 @@ You can find the cutting edge description and images of what I am doing on my Im
 
 Changelog:
 
-1.8.8-4.0.1.1589:
+1.8-4.0.1.1577:
 + rearranged ENUM class structure
 + added new ENUM tier
 + solved issue with apparently missing textures for Coal Blocks when there were no issues

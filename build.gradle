@@ -20,12 +20,12 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "1.8.8-4.0.1.1589"
+version = "1.8-4.0.1.1577"
 group= "com.kreezxil.compressedblocks" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "kreezxilscompressedblocks"
 
 minecraft {
-    version = "1.8.8-11.14.4.1589-1.8.8"
+    version = "1.8-11.14.4.1577"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
