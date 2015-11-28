@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedGold" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedGold" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedGold" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedGold" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedGold" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedGold" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedGold" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedGold" }
+	}
+}

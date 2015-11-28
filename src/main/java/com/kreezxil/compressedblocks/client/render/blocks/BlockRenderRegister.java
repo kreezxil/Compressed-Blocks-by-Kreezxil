@@ -59,7 +59,17 @@ public class BlockRenderRegister {
 		stateReg(ModBlocks.CompressedRedSand, 8);
 		stateReg(ModBlocks.CompressedFlint, 8);
 		stateReg(ModBlocks.CompressedCoalBlock, 4);
-
+		stateReg(ModBlocks.CompressedEnder_Pearl,8);
+		stateReg(ModBlocks.CompressedIron,8);
+		stateReg(ModBlocks.CompressedLapis,8);
+		stateReg(ModBlocks.CompressedNetherrack,8);
+		stateReg(ModBlocks.CompressedDiamond,8);
+		stateReg(ModBlocks.CompressedEmerald,8);
+		stateReg(ModBlocks.CompressedEnd_Stone,8);
+		stateReg(ModBlocks.CompressedGold,8);
+		stateReg(ModBlocks.CompressedClay,8);
+		stateReg(ModBlocks.CompressedObsidian,8);
+		stateReg(ModBlocks.CompressedRedstone,8);
 	}
 
 	public static void ovenRack(Block block, int maxTier) {
@@ -80,6 +90,16 @@ public class BlockRenderRegister {
 		ovenRack(ModBlocks.CompressedRedSand, 8);
 		ovenRack(ModBlocks.CompressedFlint, 8);
 		ovenRack(ModBlocks.CompressedCoalBlock, 4);
-
+		ovenRack(ModBlocks.CompressedEnder_Pearl,8);
+		ovenRack(ModBlocks.CompressedIron,8);
+		ovenRack(ModBlocks.CompressedLapis,8);
+		ovenRack(ModBlocks.CompressedNetherrack,8);
+		ovenRack(ModBlocks.CompressedDiamond,8);
+		ovenRack(ModBlocks.CompressedEmerald,8);
+		ovenRack(ModBlocks.CompressedEnd_Stone,8);
+		ovenRack(ModBlocks.CompressedGold,8);
+		ovenRack(ModBlocks.CompressedClay,8);
+		ovenRack(ModBlocks.CompressedObsidian,8);
+		ovenRack(ModBlocks.CompressedRedstone,8);
 	}
 }

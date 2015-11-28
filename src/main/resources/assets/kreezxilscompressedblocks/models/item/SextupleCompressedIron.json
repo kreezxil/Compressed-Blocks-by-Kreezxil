@@ -1,5 +1,5 @@
 {
-    "parent": "kreezxilscompressedblocks:block/CompressedGneiss",
+    "parent": "kreezxilscompressedblocks:block/SextupleCompressedIron",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
@@ -8,3 +8,4 @@
         }
     }
 }
+
