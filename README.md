@@ -5,7 +5,7 @@ CurseForge: http://minecraft.curseforge.com/projects/kreezxils-compressed-blocks
 KreezCraft: http://kreezcraft.com/mega-packs-mods/abc/c/compressed-blocks-by-kreezxil/
 
 
-Descripton:
+Description:
 For those times when your inventories are getting full of the common blocks that you just can't seem to part with long enough, or dump into the void, a trashcan, or an active volcano, now you can compress and keep them!
 
 The blocks become hard to harvest and require a stronger tool as you go up the tiers and they also becomes more blast resistant. I've left a lot of room for expansion in case some of you sickos want to craft blocks of a compression level far exceeding the 8th tier.

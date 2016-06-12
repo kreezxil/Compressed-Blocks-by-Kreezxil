@@ -7476,7 +7476,7 @@ Build 4.0.0.188:
 	LexManos: Fixed bug in DimensionManager that would cause Index error for custom dimensions, also made WorldProviders aware of what dimension they are.
 
 Build 4.0.0.187:
-	LexManos: Readded patch to allow for use of custom teleporter for transfering dimensions.
+	LexManos: Readded patch to allow for use of custom teleporter for transferring dimensions.
 
 Build 4.0.0.186:
 	LexManos: Update FML with entity spawning fixes
