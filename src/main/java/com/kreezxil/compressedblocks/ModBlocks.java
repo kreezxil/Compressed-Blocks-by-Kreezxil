@@ -1,28 +1,15 @@
 package com.kreezxil.compressedblocks;
 
 import com.kreezxil.compressedblocks.blocks.ActivatedCarbonite;
+import com.kreezxil.compressedblocks.blocks.CompressedBlock;
+import com.kreezxil.compressedblocks.blocks.FourTierCompressedBlock;
 import com.kreezxil.compressedblocks.blocks.coalAndGravelMix;
-import com.kreezxil.compressedblocks.blocks.compressed.Clay;
-import com.kreezxil.compressedblocks.blocks.compressed.CoalBlock;
-import com.kreezxil.compressedblocks.blocks.compressed.Cobblestone;
-import com.kreezxil.compressedblocks.blocks.compressed.Diamond;
-import com.kreezxil.compressedblocks.blocks.compressed.Dirt;
-import com.kreezxil.compressedblocks.blocks.compressed.Emerald;
-import com.kreezxil.compressedblocks.blocks.compressed.End_Stone;
-import com.kreezxil.compressedblocks.blocks.compressed.Ender_Pearl;
-import com.kreezxil.compressedblocks.blocks.compressed.Flint;
-import com.kreezxil.compressedblocks.blocks.compressed.Gold;
-import com.kreezxil.compressedblocks.blocks.compressed.Gravel;
-import com.kreezxil.compressedblocks.blocks.compressed.Iron;
-import com.kreezxil.compressedblocks.blocks.compressed.Lapis;
-import com.kreezxil.compressedblocks.blocks.compressed.Netherrack;
-import com.kreezxil.compressedblocks.blocks.compressed.Obsidian;
-import com.kreezxil.compressedblocks.blocks.compressed.RedSand;
-import com.kreezxil.compressedblocks.blocks.compressed.Redstone;
-import com.kreezxil.compressedblocks.blocks.compressed.Sand;
 import com.kreezxil.compressedblocks.itemBlocks.ItemBlockMeta;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public final class ModBlocks {
@@ -30,41 +17,44 @@ public final class ModBlocks {
 	/*
 	 * Compressed Blocks Declarations
 	 */
-	public static Block CompressedCoalBlock = new CoalBlock();
-	public static Block CompressedFlint = new Flint();
-	public static Block CompressedCobblestone = new Cobblestone();
-	public static Block CompressedDirt = new Dirt();
-	public static Block CompressedGravel = new Gravel();
-	public static Block CompressedRedSand = new RedSand();
-	public static Block CompressedSand = new Sand();
-	public static Block CompressedClay = new Clay();
-	public static Block CompressedDiamond = new Diamond();
-	public static Block CompressedEmerald = new Emerald();
-	public static Block CompressedEnd_Stone = new End_Stone();
-	public static Block CompressedEnder_Pearl = new Ender_Pearl();
-	public static Block CompressedGold = new Gold();
-	public static Block CompressedIron = new Iron();
-	public static Block CompressedLapis = new Lapis();
-	public static Block CompressedNetherrack = new Netherrack();
-	public static Block CompressedObsidian = new Obsidian();
-	public static Block CompressedRedstone = new Redstone();
+	public static CompressedBlock CompressedCoalBlock;
+	public static Block CompressedFlint;
+	public static Block CompressedCobblestone;
+	public static Block CompressedDirt;
+	public static Block CompressedGravel;
+	public static Block CompressedRedSand;
+	public static Block CompressedSand;
+	public static Block CompressedClay;
+	public static Block CompressedDiamond;
+	public static Block CompressedEmerald;
+	public static Block CompressedEnd_Stone;
+	public static Block CompressedEnder_Pearl;
+	public static Block CompressedGold;
+	public static Block CompressedIron;
+	public static Block CompressedLapis;
+	public static Block CompressedNetherrack;
+	public static Block CompressedObsidian;
+	public static Block CompressedRedstone;
 
 	/*
 	 * Uncompressed Blocks Declarations
 	 */
-	public static Block ActivatedCarbonite = new ActivatedCarbonite(
-			"ActivatedCarbonite");
-	public static Block coalAndGravelMix = new coalAndGravelMix(
-			"coalAndGravelMix");
+	public static Block ActivatedCarbonite = new ActivatedCarbonite("ActivatedCarbonite");
+	public static Block coalAndGravelMix = new coalAndGravelMix("coalAndGravelMix");
 
 	public static void reg(Block block) {
-		GameRegistry.registerBlock(block,
-				block.getUnlocalizedName().substring(5));
+		GameRegistry.register(block.setRegistryName(block.getUnlocalizedName().substring(5)));
 	}
 
 	public static void regCompressed(Block block) {
-		GameRegistry.registerBlock(block, ItemBlockMeta.class, block
-				.getUnlocalizedName().substring(5));
+		GameRegistry.register(block);
+		GameRegistry.register(new ItemBlockMeta(block).setRegistryName(block.getRegistryName()));
+	}
+
+	public static void registerItemBlock(Block block) {
+		GameRegistry.register(block);
+		GameRegistry.register(new ItemBlockMeta(block).setRegistryName(block.getRegistryName()));
+
 	}
 
 	public static void regFuel() {
@@ -72,27 +62,28 @@ public final class ModBlocks {
 	}
 
 	public static void createBlocks() {
-
-		reg(ActivatedCarbonite);
-		regCompressed(CompressedCoalBlock);
-		regCompressed(CompressedCobblestone);
-		regCompressed(CompressedDirt);
-		regCompressed(CompressedFlint);
-		regCompressed(CompressedGravel);
-		regCompressed(CompressedRedSand);
-		regCompressed(CompressedSand);
-		regCompressed(CompressedEnder_Pearl);
-		regCompressed(CompressedIron);
-		regCompressed(CompressedLapis);
-		regCompressed(CompressedNetherrack);
-		regCompressed(CompressedRedstone);
-		regCompressed(CompressedObsidian);
-		regCompressed(CompressedDiamond);
-		regCompressed(CompressedEmerald);
-		regCompressed(CompressedEnd_Stone);
-		regCompressed(CompressedGold);
-		regCompressed(CompressedClay);
+		regCompressed(CompressedCoalBlock = new FourTierCompressedBlock(Material.ROCK, "pickaxe", 4,
+				"CompressedCoalBlock", 2, 0.3f, 0.175f, Item.getItemFromBlock(Blocks.COAL_BLOCK), CompressedBlock.STONE,
+				CompressedBlock.IRON, CompressedBlock.IRON, CompressedBlock.IRON));
+		// regCompressed(CompressedFlint = new Flint());
+		// regCompressed(CompressedCobblestone = new Cobblestone());
+		// regCompressed(CompressedDirt = new Dirt());
+		// regCompressed(CompressedGravel = new Gravel());
+		// regCompressed(CompressedRedSand = new RedSand());
+		// regCompressed(CompressedSand = new Sand());
+		// regCompressed(CompressedClay = new Clay());
+		// regCompressed(CompressedDiamond = new Diamond());
+		// regCompressed(CompressedEmerald = new Emerald());
+		// regCompressed(CompressedEnd_Stone = new End_Stone());
+		// regCompressed(CompressedEnder_Pearl = new Ender_Pearl());
+		// regCompressed(CompressedGold = new Gold());
+		// regCompressed(CompressedIron = new Iron());
+		// regCompressed(CompressedLapis = new Lapis());
+		// regCompressed(CompressedNetherrack = new Netherrack());
+		// regCompressed(CompressedObsidian = new Obsidian());
+		// regCompressed(CompressedRedstone = new Redstone());
 		reg(coalAndGravelMix);
+		reg(ActivatedCarbonite);
 
 		regFuel();
 

@@ -1,76 +1,71 @@
-package com.kreezxil.compressedblocks.blocks.compressed;
+package com.kreezxil.compressedblocks.blocks;
 
 import java.util.List;
 import java.util.Random;
 
 import com.kreezxil.compressedblocks.CompressedBlocks;
-import com.kreezxil.compressedblocks.ModBlocks;
 import com.kreezxil.compressedblocks.blocks.compressed.Enums.FourTiers;
-import com.kreezxil.compressedblocks.itemBlocks.IMetaBlockName;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
-public class CoalBlock extends Block implements IMetaBlockName {
+public class FourTierCompressedBlock extends CompressedBlock {
 
-	public static final String harvestTool = "pickaxe";
-	public static final int MAXTIER = 4;
-	public static final String UnlocalizedName = "CompressedCoalBlock";
-	public static final float baseHardness = 2f;
-	public static final float hardnessFactor = 0.3f;
-	public static final float explosionFactor = 0.175f;
-	public static final int WOOD = 0;
-	public static final int STONE = 1;
-	public static final int IRON = 2;
-	public static final int DIAMOND = 3;
-	public static final int[] harvestLevel = { STONE, IRON, IRON, IRON };
-	public static String[] tiers = { "", "Double", "Triple", "Quadruple" };
+	public static final PropertyEnum TIER = PropertyEnum.create("tier", FourTiers.class);
 
-	public static final PropertyEnum<FourTiers> TIER = PropertyEnum.create("tier", FourTiers.class);
-
-	public CoalBlock() {
-		super(Material.ROCK);
+	public FourTierCompressedBlock(Material materialIn, String harvestToolIn, int maxTierIn, String nameIn,
+			float baseHardnessIn, float hardnessFactorIn, float explosionFactorIn, Item inputItem,
+			int... harvestLevels) {
+		super(materialIn);
+		harvestTool = harvestToolIn;
+		MAXTIER = maxTierIn;
+		UnlocalizedName = nameIn;
+		baseHardness = baseHardnessIn;
+		hardnessFactor = hardnessFactorIn;
+		explosionFactor = explosionFactorIn;
+		itemIn = inputItem;
+		harvestLevel = harvestLevels;
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TIER, FourTiers.COMPRESSED));
 		this.setUnlocalizedName(UnlocalizedName);
-		this.setCreativeTab(CreativeTabs.MISC);
 		this.setRegistryName(UnlocalizedName);
+		this.setCreativeTab(CompressedBlocks.blocksTab);
 	}
 
-//	@Override
-//	public float getBlockHardness(IBlockState blockState, World worldIn, net.minecraft.util.math.BlockPos pos) {
-//		
-//		IBlockState state = worldIn.getBlockState(pos);
-//		EightTiers stateTier = (EightTiers) state.getValue(TIER);
-//		int tier = stateTier.getID();
-//		if (tier > 0 && tier < MAXTIER) {
-//			return baseHardness * tier * hardnessFactor * tier;
-//		}
-//		return baseHardness;
-//
-//	}
-//
-//	@Override
-//	public float getExplosionResistance(World world, net.minecraft.util.math.BlockPos pos, Entity exploder,
-//			Explosion explosion) {
-//		return this.getBlockHardness(this.getStateById(exploder.getEntityId()), world, pos) * explosionFactor;
-//	}
-//
-//	@Override
-//	public String getHarvestTool(IBlockState state) {
-//		return harvestTool;
-//	}
-//
+	@Override
+	public float getBlockHardness(IBlockState blockState, World worldIn, net.minecraft.util.math.BlockPos pos) {
+
+		IBlockState state = worldIn.getBlockState(pos);
+		FourTiers stateTier = (FourTiers) state.getValue(TIER);
+		int tier = stateTier.getID();
+		if (tier > 0 && tier < MAXTIER) {
+			return baseHardness * tier * hardnessFactor * tier;
+		}
+		return baseHardness;
+
+	}
+
+	@Override
+	public float getExplosionResistance(World world, net.minecraft.util.math.BlockPos pos, Entity exploder,
+			Explosion explosion) {
+		return this.getBlockHardness(this.getStateById(exploder.getEntityId()), world, pos) * explosionFactor;
+	}
+
+	@Override
+	public String getHarvestTool(IBlockState state) {
+		return harvestTool;
+	}
+
 	@Override
 	public int getHarvestLevel(IBlockState state) {
 		FourTiers stateTier = (FourTiers) state.getValue(TIER);
@@ -81,7 +76,12 @@ public class CoalBlock extends Block implements IMetaBlockName {
 			return harvestLevel[0];
 		}
 	}
-	
+
+	@Override
+	public BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, TIER);
+	}
+
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		FourTiers tier;
@@ -100,7 +100,7 @@ public class CoalBlock extends Block implements IMetaBlockName {
 		}
 		return getDefaultState().withProperty(TIER, tier);
 	}
-//
+
 	@Override
 	public int getMetaFromState(IBlockState state) {
 		FourTiers tier = (FourTiers) state.getValue(TIER);
@@ -117,11 +117,11 @@ public class CoalBlock extends Block implements IMetaBlockName {
 		FourTiers stateTier = (FourTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier > 0 && tier < MAXTIER) {
-			// essentially it's a validation check
-			return Item.getItemFromBlock(ModBlocks.CompressedCoalBlock);
+			return Item.getItemFromBlock(this);
 		}
-		return Item.getItemFromBlock(Blocks.COAL_BLOCK);
 
+		// this is tier 0
+		return itemIn;
 	}
 
 	@Override
@@ -144,18 +144,11 @@ public class CoalBlock extends Block implements IMetaBlockName {
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos,
 			EntityPlayer player) {
-			return new ItemStack(Item.getItemFromBlock(this), 1,
-				this.getMetaFromState(world.getBlockState(pos)));
+		return new ItemStack(Item.getItemFromBlock(this), 1, this.getMetaFromState(world.getBlockState(pos)));
 	}
 
 	@Override
 	public String getSpecialName(ItemStack stack) {
 		return tiers[stack.getItemDamage()];
-	}
-
-	@Override
-	public BlockStateContainer createBlockState()
-	{
-		return new BlockStateContainer(this, TIER);
 	}
 }

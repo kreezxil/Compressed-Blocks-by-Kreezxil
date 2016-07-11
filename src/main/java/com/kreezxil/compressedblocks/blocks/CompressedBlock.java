@@ -27,35 +27,48 @@ import net.minecraft.world.World;
 
 public class CompressedBlock extends Block implements IMetaBlockName {
 	// previously there was no implements
-	public static String harvestTool = "shovel";
-	public static int MAXTIER = 8;
-	public static String UnlocalizedName = "CompressedClay";
-	public static float baseHardness = 4f;
-	public static float hardnessFactor = 1.75f;
-	public static float explosionFactor = 2f;
+	public String harvestTool;
+	public int MAXTIER;
+	public String UnlocalizedName;
+	public float baseHardness;
+	public float hardnessFactor;
+	public float explosionFactor;
 	public static int WOOD = 0;
 	public static int STONE = 1;
 	public static int IRON = 2;
 	public static int DIAMOND = 3;
-	public static int[] harvestLevel = { WOOD, WOOD, WOOD, STONE, STONE, STONE,
-			IRON, IRON };
-	public static String[] tiers = { "", "Double", "Triple", "Quadruple",
-			"Quintuple", "Sextuple", "Septuple", "Octuple" };
+	public static int[] harvestLevel = { WOOD, WOOD, WOOD, STONE, STONE, STONE, IRON, IRON };
+	public static String[] tiers = { "", "Double", "Triple", "Quadruple", "Quintuple", "Sextuple", "Septuple",
+			"Octuple" };
+	public Item itemIn;
 
-	public static final PropertyEnum TIER = PropertyEnum.create("tier",
-			EightTiers.class);
+	public static final PropertyEnum TIER = PropertyEnum.create("tier", EightTiers.class);
 
-	public CompressedBlock(Material materialIn) {
+	public CompressedBlock(Material materialIn, String harvestToolIn, int maxTierIn, String nameIn, float baseHardnessIn,
+			float hardnessFactorIn, float explosionFactorIn, Item inputItem, int... harvestLevels) {
 		super(materialIn);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(TIER,
-				EightTiers.COMPRESSED));
+		harvestTool = harvestToolIn;
+		MAXTIER = maxTierIn;
+		UnlocalizedName = nameIn;
+		baseHardness = baseHardnessIn;
+		hardnessFactor = hardnessFactorIn;
+		explosionFactor	= 	explosionFactorIn;
+		itemIn = inputItem;
+		harvestLevel = harvestLevels;
+		this.setDefaultState(this.blockState.getBaseState().withProperty(TIER, EightTiers.COMPRESSED));
 		this.setUnlocalizedName(UnlocalizedName);
+		this.setRegistryName(UnlocalizedName);
 		this.setCreativeTab(CompressedBlocks.blocksTab);
+	}
+	
+	public CompressedBlock(Material materialIn)
+	{
+		super(materialIn);
 	}
 
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, net.minecraft.util.math.BlockPos pos) {
-		
+
 		IBlockState state = worldIn.getBlockState(pos);
 		EightTiers stateTier = (EightTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
@@ -89,8 +102,9 @@ public class CompressedBlock extends Block implements IMetaBlockName {
 	}
 
 	@Override
-	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] { TIER });
+	public BlockStateContainer createBlockState()
+	{
+		return new BlockStateContainer(this, TIER);
 	}
 
 	@Override
@@ -140,11 +154,11 @@ public class CompressedBlock extends Block implements IMetaBlockName {
 		EightTiers stateTier = (EightTiers) state.getValue(TIER);
 		int tier = stateTier.getID();
 		if (tier > 0 && tier < MAXTIER) {
-			return Item.getItemFromBlock(ModBlocks.CompressedClay);
+			return Item.getItemFromBlock(this);
 		}
 
 		// this is tier 0
-		return Item.getItemFromBlock(Blocks.CLAY);
+		return itemIn;
 	}
 
 	@Override
@@ -167,8 +181,7 @@ public class CompressedBlock extends Block implements IMetaBlockName {
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos,
 			EntityPlayer player) {
-			return new ItemStack(Item.getItemFromBlock(this), 1,
-				this.getMetaFromState(world.getBlockState(pos)));
+		return new ItemStack(Item.getItemFromBlock(this), 1, this.getMetaFromState(world.getBlockState(pos)));
 	}
 
 	@Override
