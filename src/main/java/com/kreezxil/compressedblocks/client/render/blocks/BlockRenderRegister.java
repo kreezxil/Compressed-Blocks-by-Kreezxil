@@ -4,10 +4,13 @@ import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.client.model.ModelLoader;
 
 import com.kreezxil.compressedblocks.CompressedBlocks;
 import com.kreezxil.compressedblocks.ModBlocks;
+import com.kreezxil.compressedblocks.blocks.compressed.Enums.EightTiers;
+import com.kreezxil.compressedblocks.blocks.compressed.Enums.FourTiers;
 
 public class BlockRenderRegister {
 
@@ -71,35 +74,57 @@ public class BlockRenderRegister {
 		stateReg(ModBlocks.CompressedRedstone,8);
 	}
 
-	public static void ovenRack(Block block, int maxTier) {
-		String[] names = new String[maxTier];
-		for (int i = 0; i < maxTier; i++) {
-			names[i] = modid + ":" + tiers[i]
-					+ block.getUnlocalizedName().substring(5);
+//	public static void registerVariantsDefaulted(Block block, int maxTier) {
+//		String[] names = new String[maxTier];
+//		for (int i = 0; i < maxTier; i++) {
+//			names[i] = modid + ":" + tiers[i]
+//					+ block.getUnlocalizedName().substring(5);
+//		}
+//		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), names);
+//	}
+	
+	private static <T extends Enum<T> & IStringSerializable> void registerVariantsDefaulted(
+			Block b, Class<T> enumclazz, String variantHeader, int maxTier)
+	{
+		Item item = Item.getItemFromBlock(b);
+		int tier = 0;
+		for (T e : enumclazz.getEnumConstants())
+		{
+			String variantName = variantHeader + "="
+					+ e.getName().toLowerCase();
+			ModelLoader.setCustomModelResourceLocation(item, e.ordinal(),
+					new ModelResourceLocation(b.getRegistryName(),
+							variantName));
+							tier++;
+			if(tier==maxTier)
+				break;
 		}
-		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), names);
 	}
+	
+	
 
 	public static void preInit() {
 
-		ovenRack(ModBlocks.CompressedCobblestone, 8);
-		ovenRack(ModBlocks.CompressedDirt, 8);
-		ovenRack(ModBlocks.CompressedGravel, 8);
-		ovenRack(ModBlocks.CompressedSand, 8);
-		ovenRack(ModBlocks.CompressedRedSand, 8);
-		ovenRack(ModBlocks.CompressedFlint, 8);
-		ovenRack(ModBlocks.CompressedCoalBlock, 4);
-		ovenRack(ModBlocks.CompressedEnder_Pearl,8);
-		ovenRack(ModBlocks.CompressedIron,8);
-		ovenRack(ModBlocks.CompressedLapis,8);
-		ovenRack(ModBlocks.CompressedNetherrack,8);
-		ovenRack(ModBlocks.CompressedDiamond,8);
-		ovenRack(ModBlocks.CompressedEmerald,8);
-		ovenRack(ModBlocks.CompressedEnd_Stone,8);
-		ovenRack(ModBlocks.CompressedGold,8);
-		ovenRack(ModBlocks.CompressedClay,8);
-		ovenRack(ModBlocks.CompressedObsidian,8);
-		ovenRack(ModBlocks.CompressedRedstone,8);
+	registerVariantsDefaulted(ModBlocks.CompressedCobblestone,
+				EightTiers.class, "variant", 8);
+	
+		registerVariantsDefaulted(ModBlocks.CompressedCobblestone,EightTiers.class, "variant", 8);
+		registerVariantsDefaulted(ModBlocks.CompressedDirt,EightTiers.class, "variant", 8);
+		registerVariantsDefaulted(ModBlocks.CompressedGravel,EightTiers.class, "variant", 8);
+		registerVariantsDefaulted(ModBlocks.CompressedSand,EightTiers.class, "variant", 8);
+		registerVariantsDefaulted(ModBlocks.CompressedRedSand,EightTiers.class, "variant", 8);
+		registerVariantsDefaulted(ModBlocks.CompressedFlint,EightTiers.class, "variant", 8);
+		registerVariantsDefaulted(ModBlocks.CompressedCoalBlock,FourTiers.class, "variant", 4);
+		registerVariantsDefaulted(ModBlocks.CompressedEnder_Pearl,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedIron,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedLapis,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedNetherrack,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedDiamond,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedEmerald,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedEnd_Stone,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedGold,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedClay,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedObsidian,EightTiers.class, "variant",8);
+		registerVariantsDefaulted(ModBlocks.CompressedRedstone,EightTiers.class, "variant",8);
 	}
 }
