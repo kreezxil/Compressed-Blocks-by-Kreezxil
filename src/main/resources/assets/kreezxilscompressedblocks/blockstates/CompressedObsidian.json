@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedObsidian" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedObsidian" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedObsidian" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedObsidian" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedObsidian" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedObsidian" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedObsidian" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedObsidian" }
+	}
+}

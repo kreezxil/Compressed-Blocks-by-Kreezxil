@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "up": "kreezxilscompressedblocks:blocks/tnt_top","down": "kreezxilscompressedblocks:blocks/tnt_bottom","north": "kreezxilscompressedblocks:blocks/compressedTNT-animated","east": "kreezxilscompressedblocks:blocks/compressedTNT-animated","south": "kreezxilscompressedblocks:blocks/compressedTNT-animated","west": "kreezxilscompressedblocks:blocks/compressedTNT-animated","particle": "kreezxilscompressedblocks:blocks/tnt_bottom"
+    }
+}

@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedRedstone" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedRedstone" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedRedstone" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedRedstone" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedRedstone" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedRedstone" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedRedstone" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedRedstone" }
+	}
+}

@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "tier=normal":    { "model": "kreezxilscompressedblocks:CompressedFlint" },
+        "tier=double":    { "model": "kreezxilscompressedblocks:DoubleCompressedFlint" },
+        "tier=triple":    { "model": "kreezxilscompressedblocks:TripleCompressedFlint" },
+        "tier=quadruple": { "model": "kreezxilscompressedblocks:QuadrupleCompressedFlint" },
+        "tier=quintuple": { "model": "kreezxilscompressedblocks:QuintupleCompressedFlint" },
+        "tier=sextuple":  { "model": "kreezxilscompressedblocks:SextupleCompressedFlint" },
+        "tier=septuple":  { "model": "kreezxilscompressedblocks:SeptupleCompressedFlint" },
+        "tier=octuple":   { "model": "kreezxilscompressedblocks:OctupleCompressedFlint" }
+    }
+}

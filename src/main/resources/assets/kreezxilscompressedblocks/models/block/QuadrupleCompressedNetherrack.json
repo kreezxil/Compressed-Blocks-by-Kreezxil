@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "kreezxilscompressedblocks:blocks/Netherrack_0100","particle": "kreezxilscompressedblocks:blocks/Netherrack_0100"
+    }
+}

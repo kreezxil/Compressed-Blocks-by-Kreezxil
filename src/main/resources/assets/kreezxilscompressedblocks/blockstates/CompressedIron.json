@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedIron" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedIron" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedIron" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedIron" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedIron" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedIron" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedIron" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedIron" }
+	}
+}

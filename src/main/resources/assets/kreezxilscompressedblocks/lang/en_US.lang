@@ -1,0 +1,213 @@
+item.BuckyBall.name=Bucky Ball
+item.CarbonMesh.name=Carbon Mesh
+item.CarbonNanoTube.name=Carbon Nanotube
+item.CoalDust.name=Coal Dust
+item.NanoGrinder.name=Nano Grinder
+item.Sifter.name=Sifter
+item.SifterTool.name=Handheld Sifter
+item.UnfiredBuckyBall.name=Unfired Bucky Ball
+item.UnfiredCarbonMesh.name=Unfired Carbon Mesh
+item.UnfiredCarbonNanoTube.name=Unfired Carbon Nanotube
+item.UnfiredDiamond.name=Unfired Diamond
+item.UnfiredNanoGrinder.name=Unfired Nano Grinder
+item.carbonDust.name=Carbon Dust
+itemGroup.blocksTab=Kreezxil's Compressed Blocks: Blocks
+itemGroup.itemsTab=Kreezxil's Compressed Blocks: Items
+tile.ActivatedCarbonite.name=Activated Carbonite
+#
+# Compressed Coal Block
+#
+tile.CompressedCoalBlock..name=Compressed Coal Block
+tile.CompressedCoalBlock.Double.name=Double Compressed Coal Block
+tile.CompressedCoalBlock.Triple.name=Triple Compressed Coal Block
+tile.CompressedCoalBlock.Quadruple.name=Quadruple Compressed Coal Block
+#
+# Compressed Cobblestone
+#
+tile.CompressedCobblestone..name=Compressed Cobblestone
+tile.CompressedCobblestone.Double.name=Double Compressed Cobblestone
+tile.CompressedCobblestone.Triple.name=Triple Compressed Cobblestone
+tile.CompressedCobblestone.Quadruple.name=Quadruple Compressed Cobblestone
+tile.CompressedCobblestone.Quintuple.name=Quintuple Compressed Cobblestone
+tile.CompressedCobblestone.Sextuple.name=Sextuple Compressed Cobblestone
+tile.CompressedCobblestone.Septuple.name=Septuple Compressed Cobblestone
+tile.CompressedCobblestone.Octuple.name=Octuple Compressed Cobblestone
+#
+# Compressed Dirt
+#
+tile.CompressedDirt..name=Compressed Dirt
+tile.CompressedDirt.Double.name=Double Compressed Dirt
+tile.CompressedDirt.Triple.name=Triple Compressed Dirt
+tile.CompressedDirt.Quadruple.name=Quadruple Compressed Dirt
+tile.CompressedDirt.Quintuple.name=Quintuple Compressed Dirt
+tile.CompressedDirt.Sextuple.name=Sextuple Compressed Dirt
+tile.CompressedDirt.Septuple.name=Septuple Compressed Dirt
+tile.CompressedDirt.Octuple.name=Octuple Compressed Dirt
+#
+# Compressed Flint
+#
+tile.CompressedFlint..name=Compressed Flint
+tile.CompressedFlint.Double.name=Double Compressed Flint
+tile.CompressedFlint.Triple.name=Triple Compressed Flint
+tile.CompressedFlint.Quadruple.name=Quadruple Compressed Flint
+tile.CompressedFlint.Quintuple.name=Quintuple Compressed Flint
+tile.CompressedFlint.Sextuple.name=Sextuple Compressed Flint
+tile.CompressedFlint.Septuple.name=Septuple Compressed Flint
+tile.CompressedFlint.Octuple.name=Octuple Compressed Flint
+#
+# Compressed Gravel
+#
+tile.CompressedGravel..name=Compressed Gravel
+tile.CompressedGravel.Double.name=Double Compressed Gravel
+tile.CompressedGravel.Triple.name=Triple Compressed Gravel
+tile.CompressedGravel.Quadruple.name=Quadruple Compressed Gravel
+tile.CompressedGravel.Quintuple.name=Quintuple Compressed Gravel
+tile.CompressedGravel.Sextuple.name=Sextuple Compressed Gravel
+tile.CompressedGravel.Septuple.name=Septuple Compressed Gravel
+tile.CompressedGravel.Octuple.name=Octuple Compressed Gravel
+#
+# Compressed Sand
+#
+tile.CompressedSand..name=Compressed Sand
+tile.CompressedSand.Double.name=Double Compressed Sand
+tile.CompressedSand.Triple.name=Triple Compressed Sand
+tile.CompressedSand.Quadruple.name=Quadruple Compressed Sand
+tile.CompressedSand.Quintuple.name=Quintuple Compressed Sand
+tile.CompressedSand.Sextuple.name=Sextuple Compressed Sand
+tile.CompressedSand.Septuple.name=Septuple Compressed Sand
+tile.CompressedSand.Octuple.name=Octuple Compressed Sand
+#
+# Compressed Red Sand
+#
+tile.CompressedRedSand..name=Compressed Red Sand
+tile.CompressedRedSand.Double.name=Double Compressed Red Sand
+tile.CompressedRedSand.Triple.name=Triple Compressed Red Sand
+tile.CompressedRedSand.Quadruple.name=Quadruple Compressed Red Sand
+tile.CompressedRedSand.Quintuple.name=Quintuple Compressed Red Sand
+tile.CompressedRedSand.Sextuple.name=Sextuple Compressed Red Sand
+tile.CompressedRedSand.Septuple.name=Septuple Compressed Red Sand
+tile.CompressedRedSand.Octuple.name=Octuple Compressed Red Sand
+#
+# Compressed Ender_Pearl
+#
+tile.CompressedEnder_Pearl..name=Compressed Ender_Pearl
+tile.CompressedEnder_Pearl.Double.name=Double Compressed Ender_Pearl
+tile.CompressedEnder_Pearl.Triple.name=Triple Compressed Ender_Pearl
+tile.CompressedEnder_Pearl.Quadruple.name=Quadruple Compressed Ender_Pearl
+tile.CompressedEnder_Pearl.Quintuple.name=Quintuple Compressed Ender_Pearl
+tile.CompressedEnder_Pearl.Sextuple.name=Sextuple Compressed Ender_Pearl
+tile.CompressedEnder_Pearl.Septuple.name=Septuple Compressed Ender_Pearl
+tile.CompressedEnder_Pearl.Octuple.name=Octuple Compressed Ender_Pearl
+#
+# Compressed Iron
+#
+tile.CompressedIron..name=Compressed Iron
+tile.CompressedIron.Double.name=Double Compressed Iron
+tile.CompressedIron.Triple.name=Triple Compressed Iron
+tile.CompressedIron.Quadruple.name=Quadruple Compressed Iron
+tile.CompressedIron.Quintuple.name=Quintuple Compressed Iron
+tile.CompressedIron.Sextuple.name=Sextuple Compressed Iron
+tile.CompressedIron.Septuple.name=Septuple Compressed Iron
+tile.CompressedIron.Octuple.name=Octuple Compressed Iron
+#
+# Compressed Lapis
+#
+tile.CompressedLapis..name=Compressed Lapis
+tile.CompressedLapis.Double.name=Double Compressed Lapis
+tile.CompressedLapis.Triple.name=Triple Compressed Lapis
+tile.CompressedLapis.Quadruple.name=Quadruple Compressed Lapis
+tile.CompressedLapis.Quintuple.name=Quintuple Compressed Lapis
+tile.CompressedLapis.Sextuple.name=Sextuple Compressed Lapis
+tile.CompressedLapis.Septuple.name=Septuple Compressed Lapis
+tile.CompressedLapis.Octuple.name=Octuple Compressed Lapis
+#
+# Compressed Netherrack
+#
+tile.CompressedNetherrack..name=Compressed Netherrack
+tile.CompressedNetherrack.Double.name=Double Compressed Netherrack
+tile.CompressedNetherrack.Triple.name=Triple Compressed Netherrack
+tile.CompressedNetherrack.Quadruple.name=Quadruple Compressed Netherrack
+tile.CompressedNetherrack.Quintuple.name=Quintuple Compressed Netherrack
+tile.CompressedNetherrack.Sextuple.name=Sextuple Compressed Netherrack
+tile.CompressedNetherrack.Septuple.name=Septuple Compressed Netherrack
+tile.CompressedNetherrack.Octuple.name=Octuple Compressed Netherrack
+#
+# Compressed Redstone
+#
+tile.CompressedRedstone..name=Compressed Redstone
+tile.CompressedRedstone.Double.name=Double Compressed Redstone
+tile.CompressedRedstone.Triple.name=Triple Compressed Redstone
+tile.CompressedRedstone.Quadruple.name=Quadruple Compressed Redstone
+tile.CompressedRedstone.Quintuple.name=Quintuple Compressed Redstone
+tile.CompressedRedstone.Sextuple.name=Sextuple Compressed Redstone
+tile.CompressedRedstone.Septuple.name=Septuple Compressed Redstone
+tile.CompressedRedstone.Octuple.name=Octuple Compressed Redstone
+#
+# Compressed Obsidian
+#
+tile.CompressedObsidian..name=Compressed Obsidian
+tile.CompressedObsidian.Double.name=Double Compressed Obsidian
+tile.CompressedObsidian.Triple.name=Triple Compressed Obsidian
+tile.CompressedObsidian.Quadruple.name=Quadruple Compressed Obsidian
+tile.CompressedObsidian.Quintuple.name=Quintuple Compressed Obsidian
+tile.CompressedObsidian.Sextuple.name=Sextuple Compressed Obsidian
+tile.CompressedObsidian.Septuple.name=Septuple Compressed Obsidian
+tile.CompressedObsidian.Octuple.name=Octuple Compressed Obsidian
+#
+# Compressed Diamond
+#
+tile.CompressedDiamond..name=Compressed Diamond
+tile.CompressedDiamond.Double.name=Double Compressed Diamond
+tile.CompressedDiamond.Triple.name=Triple Compressed Diamond
+tile.CompressedDiamond.Quadruple.name=Quadruple Compressed Diamond
+tile.CompressedDiamond.Quintuple.name=Quintuple Compressed Diamond
+tile.CompressedDiamond.Sextuple.name=Sextuple Compressed Diamond
+tile.CompressedDiamond.Septuple.name=Septuple Compressed Diamond
+tile.CompressedDiamond.Octuple.name=Octuple Compressed Diamond
+#
+# Compressed Emerald
+#
+tile.CompressedEmerald..name=Compressed Emerald
+tile.CompressedEmerald.Double.name=Double Compressed Emerald
+tile.CompressedEmerald.Triple.name=Triple Compressed Emerald
+tile.CompressedEmerald.Quadruple.name=Quadruple Compressed Emerald
+tile.CompressedEmerald.Quintuple.name=Quintuple Compressed Emerald
+tile.CompressedEmerald.Sextuple.name=Sextuple Compressed Emerald
+tile.CompressedEmerald.Septuple.name=Septuple Compressed Emerald
+tile.CompressedEmerald.Octuple.name=Octuple Compressed Emerald
+#
+# Compressed End_Stone
+#
+tile.CompressedEnd_Stone..name=Compressed End_Stone
+tile.CompressedEnd_Stone.Double.name=Double Compressed End_Stone
+tile.CompressedEnd_Stone.Triple.name=Triple Compressed End_Stone
+tile.CompressedEnd_Stone.Quadruple.name=Quadruple Compressed End_Stone
+tile.CompressedEnd_Stone.Quintuple.name=Quintuple Compressed End_Stone
+tile.CompressedEnd_Stone.Sextuple.name=Sextuple Compressed End_Stone
+tile.CompressedEnd_Stone.Septuple.name=Septuple Compressed End_Stone
+tile.CompressedEnd_Stone.Octuple.name=Octuple Compressed End_Stone
+#
+# Compressed Gold
+#
+tile.CompressedGold..name=Compressed Gold
+tile.CompressedGold.Double.name=Double Compressed Gold
+tile.CompressedGold.Triple.name=Triple Compressed Gold
+tile.CompressedGold.Quadruple.name=Quadruple Compressed Gold
+tile.CompressedGold.Quintuple.name=Quintuple Compressed Gold
+tile.CompressedGold.Sextuple.name=Sextuple Compressed Gold
+tile.CompressedGold.Septuple.name=Septuple Compressed Gold
+tile.CompressedGold.Octuple.name=Octuple Compressed Gold
+#
+# Compressed Clay
+#
+tile.CompressedClay..name=Compressed Clay
+tile.CompressedClay.Double.name=Double Compressed Clay
+tile.CompressedClay.Triple.name=Triple Compressed Clay
+tile.CompressedClay.Quadruple.name=Quadruple Compressed Clay
+tile.CompressedClay.Quintuple.name=Quintuple Compressed Clay
+tile.CompressedClay.Sextuple.name=Sextuple Compressed Clay
+tile.CompressedClay.Septuple.name=Septuple Compressed Clay
+tile.CompressedClay.Octuple.name=Octuple Compressed Clay
+#
+tile.CompressedTNT.name=Compressed TNT
+tile.coalAndGravelMix.name=Coal and Gravel Mix

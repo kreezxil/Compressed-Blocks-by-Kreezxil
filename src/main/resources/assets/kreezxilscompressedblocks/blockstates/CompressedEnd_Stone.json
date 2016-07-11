@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedEnd_Stone" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedEnd_Stone" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedEnd_Stone" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedEnd_Stone" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedEnd_Stone" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedEnd_Stone" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedEnd_Stone" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedEnd_Stone" }
+	}
+}

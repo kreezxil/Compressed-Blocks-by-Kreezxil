@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "kreezxilscompressedblocks:blocks/End_Stone_0100","particle": "kreezxilscompressedblocks:blocks/End_Stone_0100"
+    }
+}
