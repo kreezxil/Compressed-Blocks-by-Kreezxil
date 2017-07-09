@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedDiamond" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedDiamond" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedDiamond" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedDiamond" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedDiamond" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedDiamond" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedDiamond" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedDiamond" }
+	}
+}

@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "tier=normal":    { "model": "kreezxilscompressedblocks:CompressedRedSand" },
+        "tier=double":    { "model": "kreezxilscompressedblocks:DoubleCompressedRedSand" },
+        "tier=triple":    { "model": "kreezxilscompressedblocks:TripleCompressedRedSand" },
+        "tier=quadruple": { "model": "kreezxilscompressedblocks:QuadrupleCompressedRedSand" },
+        "tier=quintuple": { "model": "kreezxilscompressedblocks:QuintupleCompressedRedSand" },
+        "tier=sextuple":  { "model": "kreezxilscompressedblocks:SextupleCompressedRedSand" },
+        "tier=septuple":  { "model": "kreezxilscompressedblocks:SeptupleCompressedRedSand" },
+        "tier=octuple":   { "model": "kreezxilscompressedblocks:OctupleCompressedRedSand" }
+    }
+}

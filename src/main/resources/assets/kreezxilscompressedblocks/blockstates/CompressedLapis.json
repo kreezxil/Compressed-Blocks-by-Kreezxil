@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedLapis" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedLapis" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedLapis" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedLapis" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedLapis" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedLapis" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedLapis" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedLapis" }
+	}
+}

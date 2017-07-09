@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedNetherrack" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedNetherrack" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedNetherrack" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedNetherrack" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedNetherrack" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedNetherrack" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedNetherrack" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedNetherrack" }
+	}
+}

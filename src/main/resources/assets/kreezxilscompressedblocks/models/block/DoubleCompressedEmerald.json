@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "kreezxilscompressedblocks:blocks/Emerald_0010","particle": "kreezxilscompressedblocks:blocks/Emerald_0010"
+    }
+}
