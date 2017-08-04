@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedEnder_Pearl" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedEnder_Pearl" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedEnder_Pearl" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedEnder_Pearl" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedEnder_Pearl" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedEnder_Pearl" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedEnder_Pearl" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedEnder_Pearl" }
+	}
+}

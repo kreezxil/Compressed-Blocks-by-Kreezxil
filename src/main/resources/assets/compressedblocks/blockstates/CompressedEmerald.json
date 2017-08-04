@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"tier=normal":		{  "model":  "kreezxilscompressedblocks:CompressedEmerald" },
+		"tier=double":		{  "model":  "kreezxilscompressedblocks:DoubleCompressedEmerald" },
+		"tier=triple":		{  "model":  "kreezxilscompressedblocks:TripleCompressedEmerald" },
+		"tier=quadruple":		{  "model":  "kreezxilscompressedblocks:QuadrupleCompressedEmerald" },
+		"tier=quintuple":		{  "model":  "kreezxilscompressedblocks:QuintupleCompressedEmerald" },
+		"tier=sextuple":		{  "model":  "kreezxilscompressedblocks:SextupleCompressedEmerald" },
+		"tier=septuple":		{  "model":  "kreezxilscompressedblocks:SeptupleCompressedEmerald" },
+		"tier=octuple":		{  "model":  "kreezxilscompressedblocks:OctupleCompressedEmerald" }
+	}
+}

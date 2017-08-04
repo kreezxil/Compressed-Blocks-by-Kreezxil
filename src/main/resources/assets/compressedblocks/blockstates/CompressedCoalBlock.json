@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "tier=normal":    { "model": "kreezxilscompressedblocks:CompressedCoalBlock" },
+        "tier=double":    { "model": "kreezxilscompressedblocks:DoubleCompressedCoalBlock" },
+        "tier=triple":    { "model": "kreezxilscompressedblocks:TripleCompressedCoalBlock" },
+        "tier=quadruple": { "model": "kreezxilscompressedblocks:QuadrupleCompressedCoalBlock" }
+    }   
+}       
+        
+        

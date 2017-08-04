@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "kreezxilscompressedblocks:blocks/septupleCompressedSand0111","particle": "kreezxilscompressedblocks:blocks/septupleCompressedSand0111"
+    }
+}

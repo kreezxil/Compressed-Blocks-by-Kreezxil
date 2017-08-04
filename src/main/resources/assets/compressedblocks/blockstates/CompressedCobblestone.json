@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "tier=normal":    { "model": "kreezxilscompressedblocks:CompressedCobblestone" },
+        "tier=double":    { "model": "kreezxilscompressedblocks:DoubleCompressedCobblestone" },
+        "tier=triple":    { "model": "kreezxilscompressedblocks:TripleCompressedCobblestone" },
+        "tier=quadruple": { "model": "kreezxilscompressedblocks:QuadrupleCompressedCobblestone" },
+        "tier=quintuple": { "model": "kreezxilscompressedblocks:QuintupleCompressedCobblestone" },
+        "tier=sextuple":  { "model": "kreezxilscompressedblocks:SextupleCompressedCobblestone" },
+        "tier=septuple":  { "model": "kreezxilscompressedblocks:SeptupleCompressedCobblestone" },
+        "tier=octuple":   { "model": "kreezxilscompressedblocks:OctupleCompressedCobblestone" }
+    }
+}

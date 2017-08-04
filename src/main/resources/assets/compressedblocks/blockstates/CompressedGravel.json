@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "tier=normal":    { "model": "kreezxilscompressedblocks:CompressedGravel" },
+        "tier=double":    { "model": "kreezxilscompressedblocks:DoubleCompressedGravel" },
+        "tier=triple":    { "model": "kreezxilscompressedblocks:TripleCompressedGravel" },
+        "tier=quadruple": { "model": "kreezxilscompressedblocks:QuadrupleCompressedGravel" },
+        "tier=quintuple": { "model": "kreezxilscompressedblocks:QuintupleCompressedGravel" },
+        "tier=sextuple":  { "model": "kreezxilscompressedblocks:SextupleCompressedGravel" },
+        "tier=septuple":  { "model": "kreezxilscompressedblocks:SeptupleCompressedGravel" },
+        "tier=octuple":   { "model": "kreezxilscompressedblocks:OctupleCompressedGravel" }
+    }
+}
