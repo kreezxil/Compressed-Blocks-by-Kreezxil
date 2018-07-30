@@ -1,27 +1,14 @@
 package com.kreezxil.compressedblocks.proxies;
 
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import com.kreezxil.compressedblocks.client.render.blocks.BlockRenderRegister;
-import com.kreezxil.compressedblocks.client.render.items.ItemRenderRegister;
-
 public class ClientProxy extends CommonProxy {
-
 	@Override
-	public void preInit(FMLPreInitializationEvent e) {
-		super.preInit(e);
-
-		BlockRenderRegister.preInit();
-
+	public void registerItemRenderer(Item item, int meta, String id) {
+		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), id));
 	}
-
-	@Override
-	public void init(FMLInitializationEvent e) {
-		super.init(e);
-		ItemRenderRegister.registerItemRenderer();
-		BlockRenderRegister.registerBlockRenderer();
-
-	}
-
 }

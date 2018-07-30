@@ -1,12 +1,12 @@
 package com.kreezxil.compressedblocks.CreativeTabs;
 
+import com.kreezxil.compressedblocks.Init.InitBlocks;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.kreezxil.compressedblocks.ModBlocks;
 
 public class BlocksTab extends CreativeTabs {
 
@@ -17,7 +17,7 @@ public class BlocksTab extends CreativeTabs {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ItemStack getTabIconItem() {
-		return new ItemStack(Item.getItemFromBlock(ModBlocks.coalAndGravelMix));
+		return new ItemStack(Item.getItemFromBlock(InitBlocks.coalAndGravelMix));
 	}
 
 }

@@ -3,7 +3,7 @@ package com.kreezxil.compressedblocks.blocks;
 import java.util.Random;
 
 import com.kreezxil.compressedblocks.CompressedBlocks;
-import com.kreezxil.compressedblocks.ModItems;
+import com.kreezxil.compressedblocks.Init.InitItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -35,7 +35,7 @@ public class coalAndGravelMix extends Block {
 	}
 
 	public Item getItemDropped(IBlockState state, Random par2Random, int par3){
-		return ModItems.carbonDust;
+		return InitItems.carbonDust;
 	}
 
 }
